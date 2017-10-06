@@ -189,6 +189,10 @@ public class RegisterUser extends Fragment {
                     JSONObject obj = new JSONObject(response);
                     JSONArray array = obj.getJSONArray("records");
                     JSONObject obj2 = array.getJSONObject(0);
+                    SharedPref pref = new SharedPref(getActivity());
+                    Log.d(TAG, "onResponse: " + obj2);
+                    pref.setDistrict(obj2.getString("districtname"));
+                    pref.setState(obj2.getString("statename"));
                     state.setText(obj2.getString("statename"));
                     district.setText(obj2.getString("districtname"));
                     tehsil.setText(obj2.getString("related_suboffice"));

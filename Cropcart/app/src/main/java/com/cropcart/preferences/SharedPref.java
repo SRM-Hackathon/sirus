@@ -58,5 +58,27 @@ public class SharedPref {
         editor.putInt("labourersavailable", laboursavailable);
         editor.apply();
     }
+
+    public String getUserdistrict() {
+        return preferences.getString("userdistrict", "undefined");
+    }
+
+    public String getUserState() {
+        return preferences.getString("userstate", "undefined");
+    }
+
+    public String getUserCountry() {
+        return preferences.getString("usercountry", "undefined");
+    }
+
+    public void setDistrict(String district) {
+        editor.putString("userdistrict", district);
+        editor.apply();
+    }
+
+    public void setState(String state) {
+        editor.putString("userstate", state);
+        editor.apply();
+    }
 }
 

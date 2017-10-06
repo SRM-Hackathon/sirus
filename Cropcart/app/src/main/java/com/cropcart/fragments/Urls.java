@@ -14,4 +14,10 @@ public class Urls {
     public static String chatmessage = "chatmessage.php";
     public static String getcommodities = "getcommodities.php";
     public static String imagepath = "images/";
+    public static String mandiapi = "https://data.gov.in/api/datastore/resource.json?resource_id=9ef84268-d588-465a-a308-a864a43d0070&api-key=579b464db66ec23bdd000001ccb5e1446049458766b77c998f25aaac";
+
+    public static String districtfilter = "&filters[district]=";
+    public static String commodityfilter = "&filters[commodity]=";
+    public static String statefilter = "&filters[state]=";
+    public static String countryfilter = "&filters[country]=";
 }

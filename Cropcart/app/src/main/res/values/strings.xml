@@ -6,4 +6,12 @@
         <item>Dozens</item>
         <item>Items</item>
     </array>
+    <array name="commodities">
+        <item>Cauliflower</item>
+        <item>Tomato</item>
+        <item>Peas(Dry)</item>
+        <item>Green Chilli</item>
+        <item>Bhindi(Ladies Finger)</item>
+        <item>Brinjal</item>
+    </array>
 </resources>

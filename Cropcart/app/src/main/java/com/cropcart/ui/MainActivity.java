@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.cropcart.R;
+import com.cropcart.fragments.Callusfrag;
 import com.cropcart.fragments.ChatFrag;
 import com.cropcart.fragments.ConsumerMainFrag;
 import com.cropcart.fragments.EquipFrag;
@@ -105,6 +106,12 @@ public class MainActivity extends AppCompatActivity {
         Bundle b = new Bundle();
         b.putSerializable("data", selectedcategories);
         frag.setArguments(b);
+        getSupportFragmentManager().beginTransaction().addToBackStack(null).setCustomAnimations(R.anim.enter, R.anim.exit, R.anim.pop_enter, R.anim.pop_exit).replace(R.id.container, frag).commit();
+
+    }
+
+    public void callusfrag() {
+        Callusfrag frag=new Callusfrag();
         getSupportFragmentManager().beginTransaction().addToBackStack(null).setCustomAnimations(R.anim.enter, R.anim.exit, R.anim.pop_enter, R.anim.pop_exit).replace(R.id.container, frag).commit();
 
     }

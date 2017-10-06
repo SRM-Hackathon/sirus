@@ -56,7 +56,7 @@ public class FarmerMainFrag extends Fragment implements View.OnClickListener {
                 ((MainActivity) getActivity()).equipmentsfrag();
                 break;
             case R.id.approval:
-
+                ((MainActivity) getActivity()).callusfrag();
                 break;
         }
     }
