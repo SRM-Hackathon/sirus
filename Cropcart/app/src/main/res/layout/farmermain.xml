@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     android:orientation="vertical">
 
     <include layout="@layout/toolbar" />
@@ -21,117 +22,170 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <android.support.v7.widget.CardView
+
+            <LinearLayout
                 android:id="@+id/myfarm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="12sp"
                 android:layout_marginRight="12sp"
                 android:layout_marginTop="12sp"
-                app:cardCornerRadius="5dp"
-                app:cardElevation="8sp">
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <ImageView
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8sp"
+                    android:layout_weight="1"
+                    android:src="@drawable/myfarm" />
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="150sp"
-                    android:orientation="horizontal"
-                    android:weightSum="4">
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="0sp"
-                        android:layout_height="150sp"
-                        android:layout_marginLeft="8sp"
-                        android:layout_weight="1"
-                        android:src="@mipmap/ic_launcher" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Crop Health"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
-                    <LinearLayout
-                        android:layout_width="0sp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="3"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="My Farm"
-                            android:textSize="32sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="12sp"
-                            android:gravity="center"
-                            android:text="Know about your farm's temperature,moisture \n and other climatic conditions"
-                            android:textSize="18sp" />
-                    </LinearLayout>
-
-
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12sp"
+                        android:gravity="center"
+                        android:text="Know about your farm's temperature,moisture \n and other climatic conditions"
+                        android:textSize="16sp" />
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
 
-            <android.support.v7.widget.CardView
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:layout_marginLeft="12sp"
+                android:layout_marginRight="12sp"
+                android:background="@color/lightgrey" />
+
+            <LinearLayout
                 android:id="@+id/experts"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="150sp"
                 android:layout_marginLeft="12sp"
                 android:layout_marginRight="12sp"
                 android:layout_marginTop="12sp"
-                android:elevation="8sp"
-                app:cardCornerRadius="5dp">
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <ImageView
+                    android:layout_width="0sp"
+                    android:layout_height="150sp"
+                    android:layout_marginLeft="8sp"
+                    android:layout_weight="1"
+                    android:src="@drawable/expert" />
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="0sp"
                     android:layout_height="150sp"
-                    android:orientation="horizontal"
-                    android:weightSum="4">
+                    android:layout_weight="3"
+                    android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="0sp"
-                        android:layout_height="150sp"
-                        android:layout_marginLeft="8sp"
-                        android:layout_weight="1"
-                        android:src="@mipmap/ic_launcher" />
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Talk to Experts"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
-                    <LinearLayout
-                        android:layout_width="0sp"
-                        android:layout_height="150sp"
-                        android:layout_weight="3"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Talk to Experts"
-                            android:textSize="32sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_margin="12sp"
-                            android:gravity="center"
-                            android:text="Chat with our experts \n and get solution of all your\nproblems at your doorstep."
-                            android:textSize="18sp" />
-                    </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="12sp"
+                        android:gravity="center"
+                        android:text="Chat with our experts \n and get solution of all your\nproblems at your doorstep."
+                        android:textSize="16sp" />
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </LinearLayout>
 
-            <android.support.v7.widget.CardView
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:layout_marginLeft="12sp"
+                android:layout_marginRight="12sp"
+                android:background="@color/lightgrey" />
+
+            <LinearLayout
                 android:id="@+id/labourers"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="150sp"
                 android:layout_marginLeft="12sp"
                 android:layout_marginRight="12sp"
                 android:layout_marginTop="12sp"
-                android:elevation="8sp"
-                app:cardCornerRadius="5dp">
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <ImageView
+                    android:layout_width="0sp"
+                    android:layout_height="150sp"
+                    android:layout_marginLeft="8sp"
+                    android:layout_weight="1"
+                    android:src="@drawable/labour" />
+
+                <LinearLayout
+                    android:layout_width="0sp"
+                    android:layout_height="150sp"
+                    android:layout_weight="3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Labourers"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="12sp"
+                        android:gravity="center"
+                        android:text="Get labourers at reasonable prices for your farm at your doorstep."
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:layout_marginLeft="12sp"
+                android:layout_marginRight="12sp"
+                android:background="@color/lightgrey" />
+
+            <LinearLayout
+                android:id="@+id/eqipments"
+                android:layout_width="match_parent"
+                android:layout_height="150sp"
+                android:layout_marginLeft="12sp"
+                android:layout_marginRight="12sp"
+                android:layout_marginTop="12sp"
+                android:orientation="horizontal"
+                android:weightSum="4">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="150sp"
+                    android:layout_marginLeft="12sp"
+                    android:layout_marginRight="12sp"
+                    android:layout_marginTop="12sp"
                     android:orientation="horizontal"
                     android:weightSum="4">
 
@@ -140,59 +194,12 @@
                         android:layout_height="150sp"
                         android:layout_marginLeft="8sp"
                         android:layout_weight="1"
-                        android:src="@mipmap/ic_launcher" />
+                        android:src="@drawable/tool" />
 
                     <LinearLayout
                         android:layout_width="0sp"
                         android:layout_height="150sp"
                         android:layout_weight="3"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Labourers"
-                            android:textSize="32sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="12sp"
-                            android:gravity="center"
-                            android:text="Get labourers at reasonable prices for your farm at your doorstep."
-                            android:textSize="18sp" />
-                    </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                android:id="@+id/eqipments"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="12sp"
-                android:layout_marginRight="12sp"
-                android:layout_marginTop="12sp"
-                android:elevation="8sp"
-                app:cardCornerRadius="5dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="150sp"
-                    android:orientation="horizontal"
-                    android:weightSum="4">
-
-                    <ImageView
-                        android:layout_width="0sp"
-                        android:layout_height="150sp"
-                        android:layout_marginLeft="8sp"
-                        android:layout_weight="1"
-                        android:src="@mipmap/ic_launcher" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="150sp"
                         android:orientation="vertical">
 
                         <TextView
@@ -200,7 +207,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="Equipments"
-                            android:textSize="32sp"
+                            android:textSize="20sp"
                             android:textStyle="bold" />
 
                         <TextView
@@ -209,59 +216,58 @@
                             android:layout_margin="12sp"
                             android:gravity="center"
                             android:text="Get tools and equipments at reasonable prices for your farm at your doorstep."
-                            android:textSize="18sp" />
+                            android:textSize="16sp" />
                     </LinearLayout>
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </LinearLayout>
 
-            <android.support.v7.widget.CardView
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:layout_marginLeft="12sp"
+                android:layout_marginRight="12sp"
+                android:background="@color/lightgrey" />
+
+            <LinearLayout
                 android:id="@+id/approval"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="12sp"
+                android:layout_height="150sp"
                 android:layout_marginLeft="12sp"
                 android:layout_marginRight="12sp"
                 android:layout_marginTop="12sp"
-                app:cardCornerRadius="5dp"
-                app:cardElevation="8sp">
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <ImageView
+                    android:layout_width="0sp"
+                    android:layout_height="150sp"
+                    android:layout_marginLeft="8sp"
+                    android:layout_weight="1"
+                    android:src="@drawable/callus" />
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="0sp"
                     android:layout_height="150sp"
-                    android:orientation="horizontal"
-                    android:weightSum="4">
+                    android:layout_weight="3"
+                    android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="0sp"
-                        android:layout_height="150sp"
-                        android:layout_marginLeft="8sp"
-                        android:layout_weight="1"
-                        android:src="@mipmap/ic_launcher" />
-
-                    <LinearLayout
+                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="150sp"
-                        android:background="@drawable/approval"
-                        android:orientation="vertical">
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Call Us"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Call Us"
-                            android:textSize="32sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="12sp"
-                            android:gravity="center"
-                            android:text="Contact us and sell your commodities at best available prices."
-                            android:textSize="18sp" />
-                    </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12sp"
+                        android:gravity="center"
+                        android:text="Contact us and sell your commodities at best available prices."
+                        android:textSize="16sp" />
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

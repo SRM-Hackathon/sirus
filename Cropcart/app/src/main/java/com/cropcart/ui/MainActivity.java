@@ -7,8 +7,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.cropcart.R;
+import com.cropcart.fragments.ChatFrag;
 import com.cropcart.fragments.ConsumerMainFrag;
 import com.cropcart.fragments.FarmerMainFrag;
+import com.cropcart.fragments.LabourersFrag;
 import com.cropcart.fragments.MyFarm;
 import com.cropcart.fragments.OrderItem;
 import com.cropcart.fragments.PostCommodity;
@@ -62,6 +64,16 @@ public class MainActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
+    public void chatfrag() {
+        ChatFrag frag = new ChatFrag();
+        getSupportFragmentManager().beginTransaction().addToBackStack(null).setCustomAnimations(R.anim.enter, R.anim.exit, R.anim.pop_enter, R.anim.pop_exit).replace(R.id.container, frag).commit();
+
+    }
+    public void labourersfrag() {
+        LabourersFrag frag = new LabourersFrag();
+        getSupportFragmentManager().beginTransaction().addToBackStack(null).setCustomAnimations(R.anim.enter, R.anim.exit, R.anim.pop_enter, R.anim.pop_exit).replace(R.id.container, frag).commit();
+
+    }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {

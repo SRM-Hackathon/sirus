@@ -7,6 +7,7 @@ import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import com.cropcart.R;
 import com.cropcart.ui.MainActivity;
@@ -16,7 +17,7 @@ import com.cropcart.ui.MainActivity;
  */
 
 public class FarmerMainFrag extends Fragment implements View.OnClickListener {
-    private CardView myfarm, experts, labours, equipments, callus;
+    private LinearLayout myfarm, experts, labours, equipments, callus;
 
     @Nullable
     @Override
@@ -45,7 +46,18 @@ public class FarmerMainFrag extends Fragment implements View.OnClickListener {
             case R.id.myfarm:
                 ((MainActivity) getActivity()).myfarm();
                 break;
+            case R.id.experts:
+                ((MainActivity) getActivity()).chatfrag();
+                break;
+            case R.id.labourers:
+                ((MainActivity) getActivity()).labourersfrag();
+                break;
+            case R.id.eqipments:
 
+                break;
+            case R.id.approval:
+
+                break;
         }
     }
 }

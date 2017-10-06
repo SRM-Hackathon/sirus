@@ -32,7 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="12sp"
-        android:hint="Numnber of workers"
+        android:hint="Number of workers"
         android:inputType="number" />
 
     <TextView
@@ -54,14 +54,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="12sp"
-        android:text="Expexted Amount:" />
+        android:text="Expected Amount:" />
 
     <TextView
         android:id="@+id/price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="12sp"
-        android:text="Rs.5000"
+        android:text="Rs.0"
         android:textSize="24sp" />
 
     <Button
