@@ -53,7 +53,7 @@ public class FarmerMainFrag extends Fragment implements View.OnClickListener {
                 ((MainActivity) getActivity()).labourersfrag();
                 break;
             case R.id.eqipments:
-
+                ((MainActivity) getActivity()).equipmentsfrag();
                 break;
             case R.id.approval:
 

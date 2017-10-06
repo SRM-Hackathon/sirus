@@ -9,12 +9,16 @@ import android.view.MenuItem;
 import com.cropcart.R;
 import com.cropcart.fragments.ChatFrag;
 import com.cropcart.fragments.ConsumerMainFrag;
+import com.cropcart.fragments.EquipFrag;
 import com.cropcart.fragments.FarmerMainFrag;
+import com.cropcart.fragments.GetEquip;
 import com.cropcart.fragments.LabourersFrag;
 import com.cropcart.fragments.MyFarm;
 import com.cropcart.fragments.OrderItem;
 import com.cropcart.fragments.PostCommodity;
 import com.cropcart.preferences.SharedPref;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -49,6 +53,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void equipmentsfrag() {
+        EquipFrag frag = new EquipFrag();
+        getSupportFragmentManager().beginTransaction().addToBackStack(null).setCustomAnimations(R.anim.enter, R.anim.exit, R.anim.pop_enter, R.anim.pop_exit).replace(R.id.container, frag).commit();
+
+    }
+
     public void orderitem(String s) {
         OrderItem frag = new OrderItem();
         Bundle bundle = new Bundle();
@@ -69,11 +79,13 @@ public class MainActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().addToBackStack(null).setCustomAnimations(R.anim.enter, R.anim.exit, R.anim.pop_enter, R.anim.pop_exit).replace(R.id.container, frag).commit();
 
     }
+
     public void labourersfrag() {
         LabourersFrag frag = new LabourersFrag();
         getSupportFragmentManager().beginTransaction().addToBackStack(null).setCustomAnimations(R.anim.enter, R.anim.exit, R.anim.pop_enter, R.anim.pop_exit).replace(R.id.container, frag).commit();
 
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -86,5 +98,14 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void movetogetEquip(ArrayList<String> selectedcategories) {
+        GetEquip frag = new GetEquip();
+        Bundle b = new Bundle();
+        b.putSerializable("data", selectedcategories);
+        frag.setArguments(b);
+        getSupportFragmentManager().beginTransaction().addToBackStack(null).setCustomAnimations(R.anim.enter, R.anim.exit, R.anim.pop_enter, R.anim.pop_exit).replace(R.id.container, frag).commit();
+
     }
 }

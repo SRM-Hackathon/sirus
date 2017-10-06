@@ -10,15 +10,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
-        app:title="Equipments" />
-
-    <View
-        android:id="@+id/view2"
-        android:layout_width="match_parent"
-        android:layout_height="1sp"
-        android:layout_below="@+id/toolbar"
-        android:background="@color/lightgrey" />
+        app:title="Buy or Lease" />
 
     <Button
         android:id="@+id/submit"
@@ -31,24 +23,11 @@
         android:text="Next"
         android:textColor="@android:color/white" />
 
-    <ScrollView
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/submit"
-        android:layout_below="@+id/view2">
-
-        <com.google.android.flexbox.FlexboxLayout
-            android:id="@+id/flexbox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:paddingTop="8dp"
-            app:alignContent="flex_start"
-            app:alignItems="flex_start"
-            app:flexDirection="row"
-            app:flexWrap="wrap"
-            app:justifyContent="flex_start" />
-    </ScrollView>
+        android:layout_below="@+id/toolbar" />
 
 </RelativeLayout>
