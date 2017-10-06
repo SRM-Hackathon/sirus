@@ -94,6 +94,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/pass"
+                android:layout_marginLeft="12sp"
+                android:layout_marginRight="12sp"
                 android:orientation="horizontal">
 
 
@@ -104,6 +106,7 @@
                     android:layout_margin="3sp"
                     android:layout_weight="1"
                     android:buttonTint="@android:color/holo_blue_light"
+                    android:checked="true"
                     android:gravity="center"
                     android:padding="9sp"
                     android:text="Male" />
@@ -205,6 +208,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/isfarmer"
+                android:layout_marginLeft="12sp"
+                android:layout_marginRight="12sp"
                 android:orientation="horizontal">
 
                 <RadioButton
@@ -214,6 +219,7 @@
                     android:layout_margin="3sp"
                     android:layout_weight="1"
                     android:buttonTint="@android:color/holo_blue_light"
+                    android:checked="true"
                     android:gravity="center"
                     android:padding="9sp"
                     android:text="Yes" />

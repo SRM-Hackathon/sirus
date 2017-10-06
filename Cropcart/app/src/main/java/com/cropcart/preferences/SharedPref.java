@@ -49,5 +49,14 @@ public class SharedPref {
         editor.putBoolean("isfarmer", isfarmer);
         editor.apply();
     }
+
+    public int getLabourersavailable() {
+        return preferences.getInt("labourersavailable", 10000);
+    }
+
+    public void setLaboursavailable(int laboursavailable) {
+        editor.putInt("labourersavailable", laboursavailable);
+        editor.apply();
+    }
 }
 

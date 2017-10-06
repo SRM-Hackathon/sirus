@@ -20,6 +20,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.cropcart.R;
+import com.cropcart.preferences.SharedPref;
 import com.cropcart.utils.GPSTracker;
 
 import java.io.IOException;
@@ -35,6 +36,9 @@ public class LabourersFrag extends Fragment {
     private EditText numworkers;
     private TextView amount, location;
     private Button send;
+    private boolean iseeror = true;
+    private int labourersavailable;
+    private int numlabourschosen;
 
     @Nullable
     @Override
@@ -45,6 +49,8 @@ public class LabourersFrag extends Fragment {
         amount = v.findViewById(R.id.price);
         location = v.findViewById(R.id.location);
         send = v.findViewById(R.id.send);
+        SharedPref pref = new SharedPref(getActivity());
+        labourersavailable = pref.getLabourersavailable();
         // check if GPS enabled
         if (gps.canGetLocation()) {
             final double latitude = gps.getLatitude();
@@ -87,14 +93,20 @@ public class LabourersFrag extends Fragment {
 
                 @Override
                 public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                    if (charSequence.toString().length() > 0)
-                        if (Integer.parseInt(charSequence.toString()) < 10000) {
-                            amount.setText(String.valueOf(Integer.parseInt(charSequence.toString()) * 250));
+                    if (charSequence.toString().length() > 0) {
+                        if (Integer.parseInt(charSequence.toString()) < labourersavailable) {
+                            numlabourschosen = Integer.parseInt(charSequence.toString());
+                            iseeror = false;
+                            amount.setText("\u20B9 " + String.valueOf(Integer.parseInt(charSequence.toString()) * 250));
                         } else {
-                            numworkers.setText("999");
-                            Toast.makeText(getActivity(), "Limit Exceeded", Toast.LENGTH_SHORT).show();
+                            iseeror = true;
+                            numworkers.setError("Limit Exceeded");
                         }
+                    } else {
+                        amount.setText("\u20B9 0");
+                    }
                 }
+
 
                 @Override
                 public void afterTextChanged(Editable editable) {
@@ -106,11 +118,14 @@ public class LabourersFrag extends Fragment {
                 public void onClick(View view) {
                     String workers = numworkers.getText().toString();
                     String loc = location.getText().toString();
-                    setRequest(workers, loc);
+                    if (!iseeror)
+                        setRequest(workers, loc);
                 }
             });
 
-        } else {
+        } else
+
+        {
             AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
 
             // Setting Dialog Title
@@ -142,6 +157,8 @@ public class LabourersFrag extends Fragment {
     }
 
     private void setRequest(String workers, String loc) {
+        SharedPref pref = new SharedPref(getActivity());
+        pref.setLaboursavailable(labourersavailable - numlabourschosen);
         Toast.makeText(getActivity(), "Request sent", Toast.LENGTH_SHORT).show();
     }
 }
