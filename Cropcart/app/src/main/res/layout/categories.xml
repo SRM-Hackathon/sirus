@@ -21,7 +21,7 @@
                 android:layout_width="60sp"
                 android:layout_height="60sp"
                 android:layout_marginTop="8sp"
-                android:src="@mipmap/ic_launcher" />
+                android:src="@drawable/cauliflower" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -43,7 +43,7 @@
                 android:layout_width="60sp"
                 android:layout_height="60sp"
                 android:layout_marginTop="8sp"
-                android:src="@mipmap/ic_launcher" />
+                android:src="@drawable/tomato" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -65,7 +65,7 @@
                 android:layout_width="60sp"
                 android:layout_height="60sp"
                 android:layout_marginTop="8sp"
-                android:src="@mipmap/ic_launcher" />
+                android:src="@drawable/peas" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -73,7 +73,7 @@
                 android:layout_marginBottom="8sp"
                 android:layout_marginTop="8sp"
                 android:gravity="center"
-                android:text="Peas(Dry)"
+                android:text="Peas"
                 android:textColor="@android:color/white" />
         </LinearLayout>
 
@@ -87,7 +87,7 @@
                 android:layout_width="60sp"
                 android:layout_height="60sp"
                 android:layout_marginTop="8sp"
-                android:src="@mipmap/ic_launcher" />
+                android:src="@drawable/chilli" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -95,7 +95,7 @@
                 android:layout_marginBottom="8sp"
                 android:layout_marginTop="8sp"
                 android:gravity="center"
-                android:text="Green Chilli"
+                android:text="Chilli"
                 android:textColor="@android:color/white" />
         </LinearLayout>
 
@@ -109,7 +109,7 @@
                 android:layout_width="60sp"
                 android:layout_height="60sp"
                 android:layout_marginTop="8sp"
-                android:src="@mipmap/ic_launcher" />
+                android:src="@drawable/bhindi" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -117,7 +117,7 @@
                 android:layout_marginBottom="8sp"
                 android:layout_marginTop="8sp"
                 android:gravity="center"
-                android:text="Bhindi(Ladies Finger)"
+                android:text="LadyF.."
                 android:textColor="@android:color/white" />
         </LinearLayout>
 
@@ -131,7 +131,7 @@
                 android:layout_width="60sp"
                 android:layout_height="60sp"
                 android:layout_marginTop="8sp"
-                android:src="@mipmap/ic_launcher" />
+                android:src="@drawable/brinjal" />
 
             <TextView
                 android:layout_width="match_parent"

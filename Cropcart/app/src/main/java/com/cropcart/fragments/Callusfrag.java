@@ -155,7 +155,7 @@ public class Callusfrag extends Fragment implements UploadStatusDelegate {
                     if (!array.toString().equals("[]")) {
                         for (int i = 0; i < array.length(); i++) {
                             JSONObject myobj = array.getJSONObject(i);
-                            Log.d("DEBUGGGG", "onResponse: " + myobj);
+                           // Log.d("DEBUGGGG", "onResponse: " + myobj);
                             int maxprice = myobj.getInt("max_price");
                             if (maxprice > countrymax) {
                                 countrymax = maxprice;

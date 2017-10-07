@@ -92,7 +92,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
             cardView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    mainActivity.orderitem(arrayList.get(getAdapterPosition()).toString());
+                    mainActivity.orderitem(arrayList.get(getAdapterPosition() - 1).toString());
                 }
             });
         }
