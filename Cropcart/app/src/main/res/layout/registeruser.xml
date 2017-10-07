@@ -84,11 +84,11 @@
                 android:layout_marginRight="12sp"
                 android:background="@drawable/border2"
                 android:hint="PIN"
-                android:inputType="number"
+                android:inputType="numberPassword"
                 android:maxLines="1"
                 android:padding="8sp" />
 
-
+    
             <RadioGroup
                 android:id="@+id/gender"
                 android:layout_width="match_parent"
