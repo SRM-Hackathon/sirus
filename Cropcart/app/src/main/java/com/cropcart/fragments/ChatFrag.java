@@ -103,7 +103,19 @@ public class ChatFrag extends Fragment {
         obj.setUserid("1");
         arrayList.add(0, obj);
         chatAdapter.notifyDataSetChanged();
+        ((MainActivity) getActivity()).setSupportActionBar(toolbar);
+        ((MainActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         return v;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                (getActivity()).onBackPressed();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 

@@ -8,8 +8,10 @@ import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -27,6 +29,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.cropcart.R;
 import com.cropcart.preferences.SharedPref;
+import com.cropcart.ui.MainActivity;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
 import net.gotev.uploadservice.MultipartUploadRequest;
@@ -114,10 +117,23 @@ public class Callusfrag extends Fragment implements UploadStatusDelegate {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Toast.makeText(getActivity(), "Evaluation submitted", Toast.LENGTH_SHORT).show();
             }
         });
+        Toolbar toolbar = (Toolbar) v.findViewById(R.id.toolbar);
+        ((MainActivity) getActivity()).setSupportActionBar(toolbar);
+        ((MainActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         return v;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                (getActivity()).onBackPressed();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private void getMandiPrices(String commodity) {

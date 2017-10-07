@@ -29,7 +29,7 @@
                 android:layout_marginBottom="8sp"
                 android:layout_marginTop="8sp"
                 android:gravity="center"
-                android:text="Patato"
+                android:text="Cauliflower"
                 android:textColor="@android:color/white" />
         </LinearLayout>
 
@@ -51,7 +51,7 @@
                 android:layout_marginBottom="8sp"
                 android:layout_marginTop="8sp"
                 android:gravity="center"
-                android:text="Tamato"
+                android:text="Tomato"
                 android:textColor="@android:color/white" />
         </LinearLayout>
 
@@ -73,7 +73,7 @@
                 android:layout_marginBottom="8sp"
                 android:layout_marginTop="8sp"
                 android:gravity="center"
-                android:text="Jaggery"
+                android:text="Peas(Dry)"
                 android:textColor="@android:color/white" />
         </LinearLayout>
 
@@ -95,7 +95,7 @@
                 android:layout_marginBottom="8sp"
                 android:layout_marginTop="8sp"
                 android:gravity="center"
-                android:text="Lady Finger"
+                android:text="Green Chilli"
                 android:textColor="@android:color/white" />
         </LinearLayout>
 
@@ -117,7 +117,7 @@
                 android:layout_marginBottom="8sp"
                 android:layout_marginTop="8sp"
                 android:gravity="center"
-                android:text="Patato"
+                android:text="Bhindi(Ladies Finger)"
                 android:textColor="@android:color/white" />
         </LinearLayout>
 
@@ -139,7 +139,7 @@
                 android:layout_marginBottom="8sp"
                 android:layout_marginTop="8sp"
                 android:gravity="center"
-                android:text="Patato"
+                android:text="Brinjal"
                 android:textColor="@android:color/white" />
         </LinearLayout>
 

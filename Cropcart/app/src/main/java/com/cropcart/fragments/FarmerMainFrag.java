@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.CardView;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,6 +34,8 @@ public class FarmerMainFrag extends Fragment implements View.OnClickListener {
     }
 
     private void bindviews(View v) {
+        Toolbar toolbar = v.findViewById(R.id.toolbar);
+        ((MainActivity) getActivity()).setSupportActionBar(toolbar);
         myfarm = v.findViewById(R.id.myfarm);
         experts = v.findViewById(R.id.experts);
         labours = v.findViewById(R.id.labourers);

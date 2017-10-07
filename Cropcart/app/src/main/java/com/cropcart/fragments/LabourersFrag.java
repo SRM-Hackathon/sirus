@@ -9,9 +9,11 @@ import android.provider.Settings;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -21,6 +23,7 @@ import android.widget.Toast;
 
 import com.cropcart.R;
 import com.cropcart.preferences.SharedPref;
+import com.cropcart.ui.MainActivity;
 import com.cropcart.utils.GPSTracker;
 
 import java.io.IOException;
@@ -153,7 +156,20 @@ public class LabourersFrag extends Fragment {
             // Showing Alert Message
             alertDialog.show();
         }
+        Toolbar toolbar = (Toolbar) v.findViewById(R.id.toolbar);
+        ((MainActivity) getActivity()).setSupportActionBar(toolbar);
+        ((MainActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         return v;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                (getActivity()).onBackPressed();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private void setRequest(String workers, String loc) {

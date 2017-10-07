@@ -7,21 +7,21 @@
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="@android:color/white"
         android:orientation="vertical">
 
         <android.support.v7.widget.Toolbar
+            android:id="@+id/toolar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
-            app:title="Submit for Evaluation"></android.support.v7.widget.Toolbar>
+            app:title="Submit for Evaluation" />
 
         <View
             android:id="@+id/view2"
             android:layout_width="match_parent"
             android:layout_height="1sp"
-            android:layout_below="@+id/toolbar"
             android:background="@color/lightgrey" />
 
         <ImageView
@@ -34,10 +34,11 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8sp"
             android:layout_marginLeft="12sp"
             android:layout_marginRight="12sp"
-            android:padding="8sp"
-            android:text="Live mandi Prices" />
+            android:text="Choose commodity to sell"
+            android:textSize="18sp" />
 
         <Spinner
             android:id="@+id/commodity"
@@ -57,7 +58,8 @@
             android:layout_marginRight="12sp"
             android:layout_marginTop="24sp"
             android:background="@drawable/border"
-            android:hint="Enter Estimated Yield"
+            android:hint="Enter Estimated Yield(in kg)"
+            android:inputType="number"
             android:padding="8sp" />
 
         <EditText
@@ -70,6 +72,7 @@
             android:layout_marginRight="12sp"
             android:background="@drawable/border"
             android:hint="Enter Expected Price"
+            android:inputType="number"
             android:padding="8sp" />
 
         <TextView
@@ -77,8 +80,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="12sp"
             android:layout_marginRight="12sp"
-            android:padding="8sp"
-            android:text="Click to Live mandi Prices"
+            android:text="Live mandi Prices"
             android:textSize="18sp" />
 
         <TextView
@@ -87,7 +89,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="12sp"
-            android:layout_marginRight="12sp" />
+            android:layout_marginRight="12sp"
+            android:layout_marginTop="6sp" />
 
         <Button
             android:id="@+id/submit"
