@@ -137,7 +137,8 @@ public class RegisterUser extends Fragment {
             public void onResponse(String response) {
                 Log.d(TAG, "onResponse: " + response);
                 if (response.equals("0")) {
-                    Toast.makeText(getActivity(), "Phone number already registered", Toast.LENGTH_SHORT).show();
+                    if (getActivity() != null)
+                        Toast.makeText(getActivity(), "Phone number already registered", Toast.LENGTH_SHORT).show();
                 } else {
                     SharedPref pref = new SharedPref(getActivity());
                     pref.setUserid(response);

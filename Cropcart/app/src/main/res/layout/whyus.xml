@@ -1,6 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Why us?" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:background="@color/lightgrey" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12sp"
+            android:layout_marginRight="12sp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <ImageView
+                android:layout_width="0sp"
+                android:layout_height="150sp"
+                android:layout_weight="1"
+                android:src="@drawable/capture" />
+
+            <TextView
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="Every crop planted is precisely cared for without any pesticide."
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12sp"
+            android:layout_marginRight="12sp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="We deliver fresh produce within a  day without losing nutrients and flavour."
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="0sp"
+                android:layout_height="150sp"
+                android:layout_weight="1"
+                android:src="@drawable/capture2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12sp"
+            android:layout_marginRight="12sp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <ImageView
+                android:layout_width="0sp"
+                android:layout_height="150sp"
+                android:layout_weight="1"
+                android:src="@drawable/capture3" />
+
+            <TextView
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="Our produce is always in season as it can grow irrespective of the weather."
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12sp"
+            android:layout_marginRight="12sp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="We use 95% less water than  traditional agriculture."
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="0sp"
+                android:layout_height="150sp"
+                android:layout_weight="1"
+                android:src="@drawable/capture4" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12sp"
+            android:layout_marginRight="12sp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <ImageView
+                android:layout_width="0sp"
+                android:layout_height="150sp"
+                android:layout_weight="1"
+                android:src="@drawable/capture5" />
+
+            <TextView
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="We can produce 100 times more over the same area of land."
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
