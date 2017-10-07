@@ -47,6 +47,7 @@ public class LabourersFrag extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.labourers, container, false);
+        setHasOptionsMenu(true);
         gps = new GPSTracker(getActivity());
         numworkers = v.findViewById(R.id.numworkers);
         amount = v.findViewById(R.id.price);

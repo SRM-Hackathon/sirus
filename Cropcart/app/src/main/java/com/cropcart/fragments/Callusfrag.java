@@ -66,6 +66,7 @@ public class Callusfrag extends Fragment implements UploadStatusDelegate {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.approvalfrag, container, false);
+        setHasOptionsMenu(true);
         bindviews(v);
         choosephoto.setOnClickListener(new View.OnClickListener() {
             @Override

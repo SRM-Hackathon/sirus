@@ -32,6 +32,7 @@ public class GetEquip extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.getequip, container, false);
+        setHasOptionsMenu(true);
         Bundle b = getArguments();
         final ArrayList<String> arrayList = (ArrayList<String>) b.getSerializable("data");
         bindviews(v);

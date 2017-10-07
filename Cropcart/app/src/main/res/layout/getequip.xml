@@ -20,7 +20,7 @@
         android:layout_centerHorizontal="true"
         android:layout_margin="12sp"
         android:background="@drawable/rounded"
-        android:text="Next"
+        android:text="Submit"
         android:textColor="@android:color/white" />
 
     <android.support.v7.widget.RecyclerView

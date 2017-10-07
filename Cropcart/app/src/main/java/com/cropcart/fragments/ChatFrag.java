@@ -72,6 +72,7 @@ public class ChatFrag extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.chat, container, false);
+        setHasOptionsMenu(true);
         Toolbar toolbar = (Toolbar) v.findViewById(R.id.toolbar);
         chatAdapter = new ChatAdapter((MainActivity) getActivity(), arrayList, isblindsuccess, profileppicid);
         editText = v.findViewById(R.id.main_activity_chat_bottom_message_edittext);

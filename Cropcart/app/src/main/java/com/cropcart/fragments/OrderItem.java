@@ -35,6 +35,7 @@ public class OrderItem extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.orderitem, container, false);
+        setHasOptionsMenu(true);
         bindviews(v);
         Toolbar toolbar = v.findViewById(R.id.toolbar);
         ((MainActivity) getActivity()).setSupportActionBar(toolbar);

@@ -32,6 +32,7 @@ public class EquipFrag extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.equipments, container, false);
+        setHasOptionsMenu(true);
         FlexboxLayout flexboxLayout = v.findViewById(R.id.flexbox);
         for (int i = 0; i < keys.length; i++) {
             View subchild = getLayoutInflater().inflate(R.layout.single_chip, null);
