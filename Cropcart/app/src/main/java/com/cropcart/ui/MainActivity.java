@@ -3,6 +3,7 @@ package com.cropcart.ui;
 import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
@@ -19,6 +20,7 @@ import com.cropcart.fragments.LabourersFrag;
 import com.cropcart.fragments.MyFarm;
 import com.cropcart.fragments.OrderItem;
 import com.cropcart.fragments.PostCommodity;
+import com.cropcart.fragments.Whyus;
 import com.cropcart.preferences.SharedPref;
 
 import java.util.ArrayList;
@@ -99,6 +101,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, Signup.class));
                 finish();
                 break;
+            case R.id.whyus:
+                Whyus frag = new Whyus();
+                getSupportFragmentManager().beginTransaction().addToBackStack(null).setCustomAnimations(R.anim.enter, R.anim.exit, R.anim.pop_enter, R.anim.pop_exit).replace(R.id.container, frag).commit();
+                break;
+            case R.id.about:
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this).setTitle("About").setMessage("This application focuses on benefitting both farmers and consumers. Our Aim is to provide reasonable prices to farmers for their produce and at the same time provide the consumers with farm fresh food.");
+                builder.show();
+                break;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -113,12 +123,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void callusfrag() {
-        Callusfrag frag=new Callusfrag();
+        Callusfrag frag = new Callusfrag();
         getSupportFragmentManager().beginTransaction().addToBackStack(null).setCustomAnimations(R.anim.enter, R.anim.exit, R.anim.pop_enter, R.anim.pop_exit).replace(R.id.container, frag).commit();
 
     }
+
     @Override
-    public void onBackPressed(){
+    public void onBackPressed() {
         FragmentManager fm = getFragmentManager();
         if (fm.getBackStackEntryCount() > 0) {
             Log.i("MainActivity", "popping backstack");

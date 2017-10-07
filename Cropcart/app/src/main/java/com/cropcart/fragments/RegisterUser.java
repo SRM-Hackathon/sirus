@@ -90,6 +90,9 @@ public class RegisterUser extends Fragment {
                 RadioButton button2 = v.findViewById(useroccupation.getCheckedRadioButtonId());
                 String mygender = button1.getText().toString();
                 String myoccupation = button2.getText().toString();
+                String userpincode = pin.getText().toString();
+                if (userpin.length() != 6)
+                    pin.setError("Enter pincode");
                 if (mygender.equals("Male")) {
                     ismale = 1;
                 } else {
@@ -108,7 +111,7 @@ public class RegisterUser extends Fragment {
                     phone.setError("Enter phone");
                 } else if (userphone.length() != 10)
                     phone.setError("Invalid phone");
-                if (username.length() > 0 && userpass.length() > 0 && userphone.length() == 10) {
+                if (username.length() > 0 && userpass.length() > 0 && userphone.length() == 10 && userpin.length() == 6) {
                     HashMap<String, String> map = new HashMap<String, String>();
                     map.put("username", username);
                     map.put("userphone", userphone);
